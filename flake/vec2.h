@@ -39,30 +39,30 @@ namespace fl {
 
 namespace fl {
     template <class T>
-    size_t hash(vec2_t <T> v) {
+    size_t hash(vec2_t<T> v) {
         return ((v.x + v.y) * (v.x + v.y + 1) >> 1) + v.x;
     };
 
     template <class K>
     struct vec2_hasher_t {
-        size_t operator()(vec2_t <K> v) const {
+        size_t operator()(vec2_t<K> v) const {
             return hash(v);
         }
     };
 
     template <class K>
     struct vec2_comparer_t {
-        bool_t operator()(vec2_t <K> a, vec2_t <K> b) const {
+        bool_t operator()(vec2_t<K> a, vec2_t<K> b) const {
             return a.x == b.x && a.y == b.y;
         }
     };
 
     template <class K, class V>
     using unordered_map_vec2_t = std::unordered_map <
-            vec2_t <K>,
+            vec2_t<K>,
             V,
-            vec2_hasher_t <K>,
-            vec2_comparer_t <K>
+            vec2_hasher_t<K>,
+            vec2_comparer_t<K>
         >;
 }
 
@@ -92,7 +92,7 @@ inline fl::bool_t operator !=(const fl::vec2_t<T>& a, const fl::vec2_t<T>& b) {
 
 template <typename T>
 inline fl::vec2_t<T> operator *(const fl::vec2_t<T>& a, const fl::vec2_t<T>& b) {
-    return fl::vec2_t <T> (a.x * b.x, a.y * b.y);
+    return vec2_t<T>(a.x * b.x, a.y * b.y);
 }
 
 template <typename T>
@@ -102,7 +102,7 @@ inline void operator *=(fl::vec2_t<T>& a, const fl::vec2_t<T>& b) {
 
 template <typename T>
 inline fl::vec2_t<T> operator *(const fl::vec2_t<T>& a, const T& b) {
-    return fl::vec2_t <T> (a.x * b, a.y * b);
+    return fl::vec2_t<T>(a.x * b, a.y * b);
 }
 
 template <typename T>
@@ -112,7 +112,7 @@ inline void operator *=(fl::vec2_t<T>& a, const T& b) {
 
 template <typename T>
 inline fl::vec2_t<T> operator /(const fl::vec2_t<T>& a, const fl::vec2_t<T>& b) {
-    return fl::vec2_t <T> (a.x / b.x, a.y / b.y);
+    return fl::vec2_t<T>(a.x / b.x, a.y / b.y);
 }
 
 template <typename T>
@@ -132,7 +132,7 @@ inline void operator /=(fl::vec2_t<T>& a, const T& b) {
 
 template <typename T>
 inline fl::vec2_t<T> operator %(const fl::vec2_t<T>& a, const T& b) {
-    return fl::vec2_t <T> (a.x % b, a.y % b);
+    return fl::vec2_t<T>(a.x % b, a.y % b);
 }
 
 template <typename T>
@@ -142,7 +142,7 @@ inline void operator %=(fl::vec2_t<T>& a, const T& b) {
 
 template <typename T>
 inline fl::vec2_t<T> operator +(const fl::vec2_t<T>& a, const fl::vec2_t<T>& b) {
-    return fl::vec2_t <T> (a.x + b.x, a.y + b.y);
+    return fl::vec2_t<T>(a.x + b.x, a.y + b.y);
 }
 
 template <typename T>
@@ -152,7 +152,7 @@ inline void operator +=(fl::vec2_t<T>& a, const fl::vec2_t<T>& b) {
 
 template <typename T>
 inline fl::vec2_t<T> operator +(const fl::vec2_t<T>& a, const T& b) {
-    return fl::vec2_t <T> (a.x + b, a.y + b);
+    return fl::vec2_t<T>(a.x + b, a.y + b);
 }
 
 template <typename T>
@@ -162,7 +162,7 @@ inline void operator +=(fl::vec2_t<T>& a, const T& b) {
 
 template <typename T>
 inline fl::vec2_t<T> operator -(const fl::vec2_t<T>& a, const fl::vec2_t<T>& b) {
-    return fl::vec2_t <T> (a.x - b.x, a.y - b.y);
+    return fl::vec2_t<T>(a.x - b.x, a.y - b.y);
 }
 
 template <typename T>
@@ -172,7 +172,7 @@ inline void operator -=(fl::vec2_t<T>& a, const fl::vec2_t<T>& b) {
 
 template <typename T>
 inline fl::vec2_t<T> operator -(const fl::vec2_t<T>& a, const T& b) {
-    return fl::vec2_t <T> (a.x - b, a.y - b);
+    return fl::vec2_t<T>(a.x - b, a.y - b);
 }
 
 template <typename T>

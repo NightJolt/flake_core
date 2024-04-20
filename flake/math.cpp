@@ -24,7 +24,7 @@ fl::float32_t fl::math::random_f32(float32_t a, float32_t b) {
 }
 
 fl::bool_t fl::math::random_chance(float32_t chance) {
-    return random_f32(0, 1) < chance;
+    return random_f32(0, 1) <= chance;
 }
 
 int32_t fl::math::mod(int32_t a, int32_t m) {
@@ -61,7 +61,7 @@ fl::float32_t fl::math::degrees(float32_t radians) {
 }
 
 fl::vec2f_t fl::math::gravitational_acceleration(vec2f_t p1, vec2f_t p2, float32_t m2) {
-    fl::vec2f_t segment = p2 - p1;
+    vec2f_t segment = p2 - p1;
 
     return normalize(segment) * m2 / scalar(segment, segment);
 }
