@@ -1,8 +1,7 @@
 #pragma once
 
 #include <flake/types.h>
-
-#include <unordered_map>
+#include <flake/std/types/unordered_map.h>
 
 namespace fl {
     template <class T>
@@ -58,7 +57,7 @@ namespace fl {
     };
 
     template <class K, class V>
-    using unordered_map_vec2_t = std::unordered_map <
+    using umap_vec2_t = umap_t<
             vec2_t<K>,
             V,
             vec2_hasher_t<K>,
