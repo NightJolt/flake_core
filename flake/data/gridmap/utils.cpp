@@ -10,7 +10,7 @@ fl::data::tile_index_t fl::data::tile_to_index(tile_pos_t tile, chunk_size_t chu
 }
 
 fl::data::grid_pos_t fl::data::world_to_grid(vec2f_t world_pos, tile_size_t tile_size) {
-    world_pos /= (float)tile_size;
+    world_pos /= (float32_t)tile_size;
 
     return grid_pos_t { (grid_int_t)(world_pos.x - (world_pos.x < 0)), (grid_int_t)(world_pos.y - (world_pos.y < 0)) };
 }

@@ -11,8 +11,6 @@ namespace fl {
     typedef float float32_t;
     typedef double float64_t;
 
-    typedef bool bool_t;
-
     typedef void* ptr_t;
 
     typedef void async;

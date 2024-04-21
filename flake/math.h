@@ -21,7 +21,7 @@ namespace fl::math {
     int32_t random_i32(int32_t, int32_t);
     int64_t random_i64(int64_t, int64_t);
     float32_t random_f32(float32_t, float32_t);
-    bool_t random_chance(float32_t);
+    bool random_chance(float32_t);
 
     int32_t mod(int32_t, int32_t);
     float32_t map_value(float32_t, float32_t, float32_t, float32_t, float32_t);
@@ -139,7 +139,7 @@ namespace fl::math {
     }
 
     template <class T>
-    bool_t in_bounds(T a, const vec2_t<T>& b) {
+    bool in_bounds(T a, const vec2_t<T>& b) {
         return a >= b.x && a <= b.y;
     }
 }

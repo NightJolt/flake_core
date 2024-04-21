@@ -23,7 +23,7 @@ fl::float32_t fl::math::random_f32(float32_t a, float32_t b) {
     return uniform_float32_distribution(engine32, std::uniform_real_distribution<float32_t>::param_type(a, b));
 }
 
-fl::bool_t fl::math::random_chance(float32_t chance) {
+bool fl::math::random_chance(float32_t chance) {
     return random_f32(0, 1) <= chance;
 }
 

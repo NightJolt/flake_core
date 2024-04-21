@@ -51,7 +51,7 @@ namespace fl {
 
     template <class K>
     struct vec2_comparer_t {
-        bool_t operator()(vec2_t<K> a, vec2_t<K> b) const {
+        bool operator()(vec2_t<K> a, vec2_t<K> b) const {
             return a.x == b.x && a.y == b.y;
         }
     };
@@ -80,12 +80,12 @@ fl::vec2_t<T>::vec2_t(const vec2_t<U>& vec2) : x((T)vec2.x), y((T)vec2.y) {}
 
 
 template <typename T>
-inline fl::bool_t operator ==(const fl::vec2_t<T>& a, const fl::vec2_t<T>& b) {
+inline bool operator ==(const fl::vec2_t<T>& a, const fl::vec2_t<T>& b) {
     return a.x == b.x && a.y == b.y;
 }
 
 template <typename T>
-inline fl::bool_t operator !=(const fl::vec2_t<T>& a, const fl::vec2_t<T>& b) {
+inline bool operator !=(const fl::vec2_t<T>& a, const fl::vec2_t<T>& b) {
     return a.x != b.x || a.y != b.y;
 }
 
