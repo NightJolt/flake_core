@@ -71,7 +71,7 @@ fl::bytes_t fl::bytes_t::create(uint8_t* data, uint32_t size) {
     return bytes;
 }
 
-fl::bytes_t fl::bytes_t::create(std::initializer_list<uint8_t> list) {
+fl::bytes_t fl::bytes_t::create(initlist_t<uint8_t> list) {
     bytes_t bytes;
 
     bytes.data = std::make_unique<uint8_t[]>(list.size());

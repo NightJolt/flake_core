@@ -2,6 +2,8 @@
 
 #include <flake/types.h>
 #include <flake/std/types/smart_ptr.h>
+#include <flake/std/types/initializer_list.h>
+#include <flake/std/types/string.h>
 
 namespace fl {
     class bytes_t {
@@ -29,8 +31,8 @@ namespace fl {
 
         static bytes_t create(uint32_t);
         static bytes_t create(uint8_t*, uint32_t);
-        static bytes_t create(std::initializer_list<uint8_t>);
-        static bytes_t create(const std::string&);
+        static bytes_t create(initlist_t<uint8_t>);
+        static bytes_t create(const str_t&);
         
     private:
         uptr_t<uint8_t[]> data;
