@@ -8,6 +8,9 @@ namespace fl {
     using arr_t = std::array<T, U>;
 
     template <class T>
+    using arr0_t = std::array<T, 0>;
+
+    template <class T>
     using arr2_t = std::array<T, 2>;
 
     template <class T>
